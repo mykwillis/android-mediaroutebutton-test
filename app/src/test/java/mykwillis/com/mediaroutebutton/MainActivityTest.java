@@ -11,6 +11,16 @@ import org.robolectric.annotation.Config;
 public class MainActivityTest {
     @Test
     public void loadActivity() {
-        MainActivity activity = Robolectric.buildActivity(MainActivity.class).create().get();
+        MainActivity activity = Robolectric.buildActivity(MainActivityNoCast.class).create().get();
+    }
+}
+
+/**
+ * Override of our MainActivity that disables load of MediaRouteButton.
+ */
+class MainActivityNoCast extends MainActivity {
+    @Override
+    protected boolean showMediaRouteButton() {
+        return false;
     }
 }
