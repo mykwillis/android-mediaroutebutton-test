@@ -5,10 +5,9 @@
     android:layout_height="match_parent"
     tools:context="mykwillis.com.mediaroutebutton.MainActivity">
 
-    <android.support.v7.app.MediaRouteButton
-        android:id="@+id/video_layer_chromecast_button"
+    <FrameLayout
+        android:id="@+id/media_route_placeholder"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"/>
+        android:layout_height="match_parent"/>
 
 </android.support.constraint.ConstraintLayout>
