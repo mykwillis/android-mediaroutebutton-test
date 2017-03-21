@@ -3,6 +3,10 @@ Attempt to get robolectric to work with use of MediaRouteButton.
 
 This is basically an Android Studio "hello, world" Android application that has Robolectric added to it.
 
+(The branch `workaround` uses a rather tediuous workaround to at least allow non-MediaRouteButton-
+related functionality to be tested with Robolectric, by dynamically loading the button instead of
+including in the layout.)
+
 It fails with this exception when trying to run the Robolectric test:
 
 android.view.InflateException: XML file build/intermediates/res/merged/debug/layout/activity_main.xml line #-1 (sorry, not yet implemented): XML file build/intermediates/res/merged/debug/layout/activity_main.xml line #-1 (sorry, not yet implemented): Error inflating class android.support.v7.app.MediaRouteButton
