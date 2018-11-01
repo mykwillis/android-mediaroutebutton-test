@@ -1,6 +1,6 @@
 package mykwillis.com.mediaroutebutton;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatActivity
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -11,3 +11,4 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 }
+

@@ -7,7 +7,7 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, shadows = MediaRouteButtonShadow.class)
+@Config(shadows = MediaRouteButtonShadow.class)
 public class MainActivityTest {
     @Test
     public void loadActivity() {
