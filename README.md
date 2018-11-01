@@ -1,5 +1,5 @@
 # android-mediaroutebutton-test
-Attempt to get robolectric to work with use of MediaRouteButton.
+Demo of robolectric working with MediaRouteButton.
 
 This is basically an Android Studio "hello, world" Android application that has Robolectric added to it.
 
@@ -7,7 +7,7 @@ This is basically an Android Studio "hello, world" Android application that has 
 related functionality to be tested with Robolectric, by dynamically loading the button instead of
 including in the layout.)
 
-It fails with this exception when trying to run the Robolectric test:
+Prior to robolectric 4.0, this project would fail with this exception when trying to run the Robolectric test:
 
 android.view.InflateException: XML file build/intermediates/res/merged/debug/layout/activity_main.xml line #-1 (sorry, not yet implemented): XML file build/intermediates/res/merged/debug/layout/activity_main.xml line #-1 (sorry, not yet implemented): Error inflating class android.support.v7.app.MediaRouteButton
 
@@ -132,5 +132,19 @@ Caused by: java.lang.ClassCastException: org.robolectric.res.AttrData cannot be 
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:262)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:84)
 	... 1 more
+	
+After upgrading to robolectric 4.0 and adding 
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+to build.gradle, and 
+
+	enableUnitTestBinaryResources=true
+
+to gradle.properties, this test runs without issue.
 
 
